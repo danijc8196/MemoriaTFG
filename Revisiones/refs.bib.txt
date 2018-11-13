@@ -1,0 +1,186 @@
+@book{book_ros,
+    author={Anil Mahtani and Luis Sánchez and Enrique Fernández and Aaron Martinez},
+    title={Effective robotics programming with ROS: find out everything you need to know to build powerful robots with the most up-to-date ROS},
+    edition={3},
+    place={Birmingham, UK},
+    publisher={Packt Publishing},
+    year={2016}
+}
+
+@book{rl_book1,
+    author={Stuart Russell and Peter Norvig},
+    title={Artificial intelligence: a modern approach},
+    edition={3},
+    place={Boston},
+    publisher={Pearson},
+    year={2016}
+}
+
+@book{rl_book2,
+    author={Richard S. Sutton and Andrew G. Barto},
+    title={Reinforcement learning: an introduction},
+    edition={2},
+    place={Cambridge, MA},
+    publisher={The MIT Press},
+    year={2018}
+}
+
+@article{dronesimlab_paper,
+    author={Ganoni, Ori and Mukundan, Ramakrishnan},
+    title={A Framework for Visually Realistic Multi-robot Simulation in Natural Environment},
+    journal={arXiv preprint arXiv:1708.01938},
+    year={2017},
+    ISBN={978-80-86943-44-2},
+    ISSN={2464-4617},
+    note={WSCG 2017 proceedings}
+}
+
+@article{gym_paper,
+    author={Greg Brockman and Vicki Cheung and Ludwig Pettersson and Jonas Schneider and John Schulman and Jie Tang and Wojciech Zaremba},
+    title={OpenAI Gym},
+    journal={CoRR},
+    year={2016},
+    volume={abs/1606.01540}
+}
+
+@article{paper_gym_ros_gazebo,
+    author={Iker Zamora and Nestor Gonzalez Lopez and Victor Mayoral Vilches and Alejandro Hern{\'a}ndez Cordero},
+    title={Extending the OpenAI Gym for robotics: a toolkit for reinforcement learning using ROS and Gazebo},
+    journal={CoRR},
+    year={2016},
+    volume={abs/1608.05742}
+}
+
+@article{mavlink_paper,
+  	author={Sukhrob Atoev and Ki-Ryong Kwon and Suk-Hwan Lee and Kwang-Seok Moon},
+  	title={Data analysis of the MAVLink communication protocol},
+  	journal={2017 International Conference on Information Science and Communications Technologies (ICISCT)},
+  	year={2017},
+  	pages={1-3}
+}
+
+@article{hitl_sitl_paper2,
+    author={Calvin Coopmans and Michal Podhradsk{\'y} and Nathan Hoffer},
+    title={Software- and hardware-in-the-loop verification of flight dynamics model and flight control simulation of a fixed-wing unmanned aerial vehicle},
+    journal={2015 Workshop on Research, Education and Development of Unmanned Aerial Systems (RED-UAS)},
+    year={2015},
+    pages={115-122}
+}
+
+@article{rl_paper1,
+    author={Leslie Pack Kaelbling and Michael L. Littman and Andrew W. Moore},
+    title={Reinforcement Learning: A Survey},
+    journal={J. Artif. Intell. Res.},
+    year={1996},
+    volume={4},
+    pages={237-285}
+}
+
+@article{rl_paper2,
+    author={Jens Kober and J. Andrew Bagnell and Jan Peters},
+    title={Reinforcement learning in robotics: A survey},
+    journal={I. J. Robotics Res.},
+    year={2013},
+    volume={32},
+    pages={1238-1274}
+}
+
+@inproceedings{airsim_paper,
+    author={Shital Shah and Debadeepta Dey and Chris Lovett and Ashish Kapoor},
+    title={AirSim: High-Fidelity Visual and Physical Simulation for Autonomous Vehicles},
+    booktitle={Field and Service Robotics},
+    year={2017},
+    eprint={arXiv:1705.05065},
+    url={https://arxiv.org/abs/1705.05065}
+}
+
+@inproceedings{px4_paper, 
+    author={L. Meier and D. Honegger and M. Pollefeys}, 
+    title={PX4: A node-based multithreaded open source robotics framework for deeply embedded platforms},
+    booktitle={2015 IEEE International Conference on Robotics and Automation (ICRA)},
+    year={2015},
+    doi={10.1109/ICRA.2015.7140074}
+}
+
+@inproceedings{hitl_sitl_paper1,
+    author={Eric N. Johnson and Sebastien Fontaine},
+    title={Use of Flight Simulation to Complement Flight Testing of Low-cost Uavs},
+    year={2001}
+}
+
+@inproceedings{sim4cv_paper,
+    author={Matthias Mueller and Vincent Casser and Jean Lahoud and Neil Smith and Bernard Ghanem},
+    title={A Photo-Realistic Simulator for Computer Vision Applications},
+    year={2018}
+}
+
+@inproceedings{hector_paper,
+    author={Johannes Meyer and Alexander Sendobry and Stefan Kohlbrecher and Uwe Klingauf and Oskar von Stryk},
+    title={Comprehensive Simulation of Quadrotor UAVs Using ROS and Gazebo},
+    booktitle={SIMPAR},
+    year={2012}
+}
+
+@conference{ros_paper,
+    author={Quigley, Morgan and Conley, Ken and Gerkey, Brian P. and Faust, Josh and Foote, Tully and Leibs, Jeremy and Wheeler, Rob and Ng, Andrew Y.},
+    title={ROS: an open-source Robot Operating System},
+    booktitle={ICRA Workshop on Open Source Software},
+    year={2009},
+    attachments={http://www.willowgarage.com/sites/default/files/icraoss09-ROS.pdf}
+}
+
+@incollection{rotors_paper,
+    author={Fadri Furrer, Michael Burri, Markus Achtelik, and Roland Siegwart},
+    title={RotorS - A Modular Gazebo MAV Simulator Framework}, 
+    year={2015}
+}
+
+@misc{sim4cv_youtube,
+    author={Matthias Müller and Vincent Casser and Jean Lahoud and Neil Smith and Bernard Ghanem},
+    title={Sim4CV: A Photo-Realistic Simulator for Computer Vision Applications},
+    journal={Youtube},
+    year={2018},
+    url={https://youtu.be/SqAxzsQ7qUU}
+}
+
+@misc{drone_training,
+    author={Tellez, Ricardo},
+    title={Using OpenAI with ROS},
+    journal={The Construct},
+    year={2018},
+    url={http://www.theconstructsim.com/using-openai-ros/}
+}
+
+@misc{px4_dev_Architecture,
+    author={Dronecode Project Inc},
+    title={PX4 Architectural Overview},
+    journal={PX4 Developer Guide},
+    url={https://dev.px4.io/en/concept/architecture.html}, 
+    publisher={Dronecode Project Inc.}
+}
+
+@misc{what_is_gazebo,
+    author={Open Source Robotics Foundation},
+    title={What is Gazebo?}, 
+    journal={Beginner: Overview},
+    url={http://gazebosim.org/tutorials?tut=guided_b1&cat=#WhatisGazebo?},
+    publisher={Open Source Robotics Foundation}
+}
+
+@misc{rotors_website,
+    author={Autonomous Systems Lab and ETH Zurich},
+    title={RotorS Simulator},
+    journal={Autonomous Robots Lab},
+    url={https://www.autonomousrobotslab.com/rotors-simulator2.html}
+}
+
+
+
+
+
+
+
+
+
+
+

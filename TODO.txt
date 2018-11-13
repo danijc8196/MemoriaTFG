@@ -1,0 +1,6 @@
+\section{TODO}
+	
+\begin{itemize}
+	\item Revisar estilo de bibliografia
+	\item Revisar estilo general de títulos, párrafos, imágenes (tamaños de letra, cursiva o negrita, etc)
+\end{itemize}
