@@ -1,0 +1,185 @@
+
+
+Requisitos: tener instalado Ubuntu 16.04, git, python
+
+instalar airsim: https://github.com/danijc8196/MyRosAirSim/blob/tfg_definitive/docs/build_linux.md
+
+instalar ROS: http://wiki.ros.org/kinetic/Installation/Ubuntu
+
+crear workspace ROS http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment
+
+instalar PX4: https://github.com/danijc8196/MyRosAirSim/blob/tfg_definitive/docs/px4_build.md
+
+instalar gym: https://github.com/openai/gym
+
+
+Una vez esta todo, copiar el archivo de AirsimClient al directorio de gym_training
+
+Lanzar la simulacion con este archivo:
+
+	lanzar airsim, lanzar px4
+	cuando estan listos, darle al play en el simulador
+	despues lanzar training (offboard + gym)
+
+
+
+_______________________________________________________________________________________________________ start_parking vigo
+	
+#! /bin/sh
+
+printf "|==============================|\n"
+printf "|   Launching Parking Server   |\n"
+printf "|------------------------------|\n"
+printf "|        Production Mode       |\n"
+printf "|==============================|\n"
+
+printf "\n"
+printf " - Setting up Parking Server...\n"
+#sh pilotsite.sh >/dev/null 2>/dev/null
+
+printf "%s\r" '[                    ] 0%'
+sleep 0.02s
+printf "%s\r" '[##                  ] 10%'
+sleep 0.02s
+printf "%s\r" '[####                ] 20%'
+sleep 0.02s
+printf "%s\r" '[######              ] 30%'
+sleep 0.02s
+printf "%s\r" '[########            ] 40%'
+sleep 0.02s
+printf "%s\r" '[##########          ] 50%'
+sleep 0.02s
+printf "%s\r" '[############        ] 60%'
+sleep 0.02s
+printf "%s\r" '[##############      ] 70%'
+sleep 0.02s
+printf "%s\r" '[################    ] 80%'
+sleep 0.02s
+printf "%s\r" '[##################  ] 90%'
+sleep 0.02s
+printf "[####################] 100%% \n"
+sleep 0.02s
+printf "Parking Server launched.\n"
+sleep 0.1s
+
+cd /home/cloud4cad/iot/Parking/
+java -jar /home/cloud4cad/iot/Parking/DatexParkingTest-0.2.0-SNAPSHOT-Vigo-jar-with-dependencies.jar >/home/cloud4cad/iot/Parking/logs_jar_vigo/log.out 2>/home/cloud4cad/iot/Parking/logs_jar_vigo/log_error.out &
+echo "$!" > /home/cloud4cad/pid/Parking.pid
+cd /home/cloud4cad/iot/Parking/parking-frontend-vigo/
+/home/cloud4cad/iot/Parking/venv_parking/bin/python /home/cloud4cad/iot/Parking/parking-frontend-vigo/parking_vigo.py >/home/cloud4cad/iot/Parking/parking-frontend-vigo/logs/log.out 2>/home/cloud4cad/iot/Parking/parking-frontend-vigo/logs/log_error.out &
+echo "$!" > /home/cloud4cad/pid/ParkingManagement.pid
+
+printf "\n"
+printf "Ready...\n"
+printf "PID: %s\n" $(cat /home/cloud4cad/pid/Parking.pid)
+printf "\n"
+
+_______________________________________________________________________________________________________stop parking
+
+kill -9 $(cat /home/cloud4cad/pid/Parking.pid)
+kill $(cat /home/cloud4cad/pid/ParkingManagement.pid)
+printf "\nParking Server stopped.\n"
+printf "Logs in iot/Parking/log.out\n"
+rm /home/cloud4cad/pid/Parking.pid
+rm /home/cloud4cad/pid/ParkingManagement.pid
+
+
+_______________________________________________________________________________________________________start om2m devel
+
+#! /bin/sh
+clear
+
+printf "|===============================|\n"
+printf "|      Launching OM2M Test      |\n"
+printf "|-------------------------------|\n"
+printf "|          Devel mode           |\n"
+printf "|===============================|\n"
+
+printf "\n"
+cd /home/cloud4cad/om2m/devel-server
+
+printf "%s\r" '[                    ] 0%'
+sleep 0.2s
+printf "%s\r" '[##                  ] 10%'
+sleep 0.2s
+printf "%s\r" '[####                ] 20%'
+sleep 0.2s
+printf "%s\r" '[######              ] 30%'
+sleep 0.2s
+printf "%s\r" '[########            ] 40%'
+sleep 0.2s
+printf "%s\r" '[##########          ] 50%'
+sleep 0.2s
+printf "%s\r" '[############        ] 60%'
+sleep 0.2s
+printf "%s\r" '[##############      ] 70%'
+sleep 0.2s
+printf "%s\r" '[################    ] 80%'
+sleep 0.2s
+printf "%s\r" '[##################  ] 90%'
+sleep 0.2s
+printf "[####################] 100%% \n"
+sleep 0.2s
+printf "IN launched.\n"
+sleep 0.5s
+sh in.sh >logs/log_in.out &
+
+printf "\n\n"
+
+printf "%s\r" '[                    ] 0%'
+sleep 0.2s
+printf "%s\r" '[##                  ] 10%'
+sleep 0.2s
+printf "%s\r" '[####                ] 20%'
+sleep 0.2s
+printf "%s\r" '[######              ] 30%'
+sleep 0.2s
+printf "%s\r" '[########            ] 40%'
+sleep 0.2s
+printf "%s\r" '[##########          ] 50%'
+sleep 0.2s
+printf "%s\r" '[############        ] 60%'
+sleep 0.2s
+printf "%s\r" '[##############      ] 70%'
+sleep 0.2s
+printf "%s\r" '[################    ] 80%'
+sleep 0.2s
+printf "%s\r" '[##################  ] 90%'
+sleep 0.2s
+printf "[####################] 100%% \n"
+sleep 0.2s
+printf "ASN Vehicle launched.\n"
+sleep 0.5s
+sh asn.sh >logs/log_asn.out &
+
+printf "\n\n"
+
+printf "%s\r" '[                    ] 0%'
+sleep 0.2s
+printf "%s\r" '[##                  ] 10%'
+sleep 0.2s
+printf "%s\r" '[####                ] 20%'
+sleep 0.2s
+printf "%s\r" '[######              ] 30%'
+sleep 0.2s
+printf "%s\r" '[########            ] 40%'
+sleep 0.2s
+printf "%s\r" '[##########          ] 50%'
+sleep 0.2s
+printf "%s\r" '[############        ] 60%'
+sleep 0.2s
+printf "%s\r" '[##############      ] 70%'
+sleep 0.2s
+printf "%s\r" '[################    ] 80%'
+sleep 0.2s
+printf "%s\r" '[##################  ] 90%'
+sleep 0.2s
+printf "[####################] 100%% \n"
+sleep 0.2s
+printf "ASN Camera launched.\n"
+sleep 0.5s
+sh asn-camera.sh >logs/log_asn_camera.out &
+
+printf "\n"
+printf "Ready...\n"
+printf "\n"
